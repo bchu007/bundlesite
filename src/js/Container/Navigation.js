@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import SearchBar from '../Components/Search'
 import Menu from '../Container/Menu'
+import { fullscreen, halfscreen, mobilescreen } from '../../css/variables'
 
 const NavBar = styled.div`
-    height: auto;
+    height: 100%;
     background-color: black;
-    padding: 2px;
     white-space: nowrap;
     justify-content: space-between;
     display: flex;
@@ -14,9 +14,13 @@ const NavBar = styled.div`
 `;
 
 const LogoWrapper = styled.img`
-    height: 50px;
+    height: 35px;
     width: 100px;
-    margin: 10px;
+    margin: 5px;
+
+    @media (max-width: 700px) {
+        margin: 10px auto;
+    }
 `;
 
 export default function Navigation() {
@@ -25,7 +29,6 @@ export default function Navigation() {
         <NavBar>
 
             <LogoWrapper src="https://via.placeholder.com/100x50" />
-            <SearchBar />
             <Menu />
         </NavBar>
     )

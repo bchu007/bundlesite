@@ -6,7 +6,6 @@ const StoreWrapper = styled.div`
     height: 100%;
     background-color: grey;
     padding: 10px;
-    
 `;
 
 const CardWrapper = styled.div`

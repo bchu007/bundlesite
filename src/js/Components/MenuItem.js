@@ -4,13 +4,11 @@ import styled from 'styled-components'
 
 const ItemWrapper = styled.span`
     display: inline-block;
-    padding: 9px;
-    margin-left: 10px;
+    padding: 6px 15px;
     font-family: Poppins;
 
     &:hover {
-        padding: 8px;
-        border-radius: 5%;
+        padding: 5px 14px;
         border: white solid 1px;
     }
 `

@@ -25,6 +25,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-use-dimensions": "^1.2.1",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {

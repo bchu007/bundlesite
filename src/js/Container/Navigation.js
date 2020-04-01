@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import SearchBar from '../Components/Search'
 import Menu from '../Container/Menu'
 import { fullscreen, halfscreen, mobilescreen } from '../../css/variables'
-
+import { Link } from '@reach/router'
 const NavBar = styled.div`
     height: 100%;
     background-color: black;
@@ -13,23 +13,12 @@ const NavBar = styled.div`
     flex-wrap: wrap;
 `;
 
-const LogoWrapper = styled.img`
-    height: 35px;
-    width: 100px;
-    margin: 5px;
 
-    @media (max-width: 700px) {
-        margin: 10px auto;
-    }
-`;
 
-export default function Navigation() {
-
+export default function Navigation(props) {
     return (
         <NavBar>
-
-            <LogoWrapper src="https://via.placeholder.com/100x50" />
-            <Menu />
+            <Menu itemCount={props.itemCount}/>
         </NavBar>
     )
 }

@@ -12,6 +12,7 @@ const StoreWall = styled.div`
     background-color: grey;
 `
 const StoreWrapper = styled.div`
+    margin: 0 auto;
     background-color: white;
     height: 100%;
     padding: 10px;
@@ -43,7 +44,7 @@ function getProducts(page, props) {
 }
 
 const StoreFront = props => {
-   
+
     return (
         <StoreWrapper >
             <CardWrapper>

@@ -55,7 +55,7 @@ const ImgWrapper = styled.img`
 
 const CardTitle = styled.div`
     font-size: 16px;
-    height: 40px;
+    height: 80px;
     overflow: hidden;
     &:hover {
         text-decoration: underline;

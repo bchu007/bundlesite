@@ -25,7 +25,7 @@ const CardWrapper = styled.span`
     }
 
     &:hover {
-        background-color: green;
+        background-color: 	rgba(0,128,0,1);
     }
 `;
 
@@ -80,9 +80,11 @@ const CartButton = styled.div`
 
 const BuyWrapper = styled.div`
     position: relative;
-    bottom: 0px;
+    bottom: 320px;
     display: flex;
     justify-content: center;
+
+
 `
 
 

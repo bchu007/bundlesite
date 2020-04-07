@@ -255,7 +255,7 @@ const Cart = props => {
               <PurchasedImg src={props.purchased.url} />
             </FloatLeftWrapper>
             <FloatRightWrapper>
-              quantity: {props.purchased.quantity}
+              quantity: {props.purchased['quantity']}
             </FloatRightWrapper>
           </PurchasedWrapper>
 

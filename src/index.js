@@ -36,10 +36,12 @@ function WebContainer() {
     const [product, setProduct] = useState(productDummy);
 
     const [cart, setCart] = useState(CartData);
-
+    const [purchased, setPurchased] = useState();
     function addCart(product) {
         var item_index = cart.map(item => item.product_id).indexOf(product.product_id);
         var newCart = cart;
+        setPurchased(product);
+
         if(item_index !== -1) {
             if(product.quantity) {
                 //product quantity is being changed in cart
@@ -70,7 +72,7 @@ function WebContainer() {
     return (
         <React.Fragment>
             <GlobalStyle />
-            <Navigation itemCount={itemCount}/>
+            <Navigation itemCount={itemCount} setPurchased={setPurchased}/>
             <Router primary={false}>
                 <Redirect
                     from="/"
@@ -82,7 +84,9 @@ function WebContainer() {
                 <Cart path='Cart'
                     addCart={addCart}
                     removeCart={removeCart}
-                    cart={cart}/>
+                    cart={cart}
+                    setPurchased={setPurchased}
+                    purchased={purchased}/>
                 <StoreFront  path='/:category' mode={setMode}
                     product={productDummy}
                     change={setProduct}

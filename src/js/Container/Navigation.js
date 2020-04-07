@@ -17,7 +17,7 @@ const NavBar = styled.div`
 
 export default function Navigation(props) {
     return (
-        <NavBar>
+        <NavBar onClick={() => props.setPurchased()}>
             <Menu itemCount={props.itemCount}/>
         </NavBar>
     )

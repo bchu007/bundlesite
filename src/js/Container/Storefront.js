@@ -43,6 +43,7 @@ function getProducts(page, props) {
 }
 
 const StoreFront = props => {
+   
     return (
         <StoreWrapper >
             <CardWrapper>

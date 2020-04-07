@@ -131,9 +131,33 @@ const CheckoutButton = styled.button`
   }
 `;
 
+
+const PurchasedWrapper = styled.div`
+  height: 120px;
+  border-radius: 4px;
+  border: thin solid black;
+  font-family: Poppins;
+  padding: 10px;
+  background-color: rgba(0, 256, 0, .5);
+
+
+`
+const PurchasedImg = styled.img`
+  height: 90px;
+  display: block;
+  margin-top: 5px;
+  background-color: white;
+`;
+
+const PurchasedText = styled.div`
+
+`;
+
 const Cart = props => {
   var date = new Date();
 
+  console.log('cart props: ', props)
+  // props.setPurchased();
   var cartitems = props.cart.map((item, index) => {
     return (
       <React.Fragment key={index.toString()}>
@@ -176,6 +200,7 @@ const Cart = props => {
           </Stocked>
           <QuantityWrapper>
             <QuantitySelector onClick={(event) => {
+              props.setPurchased();
               console.log(event.target.value);
               if (parseInt(event.target.value) === 0) {
                 props.removeCart(item.product_id);
@@ -218,6 +243,24 @@ const Cart = props => {
   })
   return (
     <CartWrapper>
+      {
+        props.purchased && (
+          <PurchasedWrapper>
+            Added to Cart: &nbsp;
+            {props.purchased.name}
+            <FloatLeftWrapper>
+              <PurchasedText>
+
+              </PurchasedText>
+              <PurchasedImg src={props.purchased.url} />
+            </FloatLeftWrapper>
+            <FloatRightWrapper>
+              quantity: {props.purchased.quantity}
+            </FloatRightWrapper>
+          </PurchasedWrapper>
+
+        )
+      }
       <CartHeader>
         <CartHeaderTitle>Your Orders</CartHeaderTitle>
         <CheckoutButton>

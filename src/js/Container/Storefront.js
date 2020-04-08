@@ -37,6 +37,7 @@ function getProducts(page, props) {
                 name={product.name}
                 addCart={props.addCart}
                 removeCart={props.removeCart}
+                price={product.price}
                 // price={product.price}
                 description={product.description} />
         )

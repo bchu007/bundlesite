@@ -58,6 +58,11 @@ const ProductDescription = styled.div`
   tab-size: 50;
 `
 
+const ProductPrice = styled.div`
+  color: #B12704;
+  height: auto;
+`;
+
 export default function Detail(props) {
 
   return (
@@ -72,6 +77,9 @@ export default function Detail(props) {
             {props.location.state.name}
 
           </ProductName>
+          <ProductPrice>
+            ${props.location.state.price}.00
+          </ProductPrice>
           <ProductDescription>
             {props.location.state.description}
           </ProductDescription>

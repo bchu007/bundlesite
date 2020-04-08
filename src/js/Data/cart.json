@@ -7,7 +7,8 @@
   "product_id": 2,
   "options": 2,
   "description": "Eitetsu okedo are made of cow hide.\n\nYou can customize your own okedo taiko. Please contact us.\n\n[Made in Japan]",
-  "quantity": 1
+  "quantity": 1,
+  "price": 2300
 },
 {
   "group_id": 1,
@@ -17,7 +18,8 @@
   "product_id": 3,
   "options": 2,
   "description": "All katsugi okedo are made with cow hide.  \n\nYou can customize your own Okedo Taiko. Please contact us.\n\n[Made in Japan]",
-  "quantity": 3
+  "quantity": 3,
+  "price": 1060
 },
 {
   "group_id": 1,
@@ -27,6 +29,7 @@
   "product_id": 4,
   "options": 0,
   "description": "Kanade katsugi okedo is Asano Taiko's newest product!\n\nDrum size: 1.6shaku (39.5cm / 16in)\n\nBody Length: 54.5cm (21in)\n\n[Made in Japan]",
-  "quantity": 1
+  "quantity": 1,
+  "price": 2150
 }
 ]

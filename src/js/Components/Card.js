@@ -86,7 +86,12 @@ const BuyWrapper = styled.div`
 
 
 `
-
+const PriceWrapper = styled.div`
+    position: relative;
+    bottom: 130px;
+    display: flex;
+    color: #B12704;
+`
 
 export default function Card(props) {
     const newpath = '/product/' + props.product.product_id;
@@ -105,9 +110,7 @@ export default function Card(props) {
                     name: props.name,
                     description: props.description,
                     product: props.product,
-                    // addCar: props.addCart,
-
-                    // removeCart: props.removeCart
+                    price: props.price,
                 }})}
                 >
 
@@ -116,7 +119,9 @@ export default function Card(props) {
                 <CardText>
                     {props.description}
                 </CardText>
-
+                <PriceWrapper>
+                    ${props.price}.00
+                </PriceWrapper>
                 {
                     hover &&
                     <BuyWrapper onClick={(e) => {

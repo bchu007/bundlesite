@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import Card from '../Components/CartItem'
@@ -153,12 +153,29 @@ const PurchasedText = styled.div`
 
 `;
 
+const TotalPrice = styled.span`
+  margin-top: 30px;
+  margin-left: 40px;
+  float: right;
+  width: 200px;
+  height: 30px;
+  padding: 3px;
+  text-align: center;
+  padding: 3px;
+
+`
 const Cart = props => {
   var date = new Date();
 
+  const [totalPrice, setTotalPrice] = useState(props.cart.map((item, index) => {
+    return (item.price * item.quantity)
+  }).reduce((a, b) => a + b));
   console.log('cart props: ', props)
-  // props.setPurchased();
+
+
+
   var cartitems = props.cart.map((item, index) => {
+
     return (
       <React.Fragment key={index.toString()}>
         <CartItemHeaderWrapper>
@@ -174,7 +191,7 @@ const Cart = props => {
             <CardItemHeader>
               TOTAL
               <CardItemHeaderContent>
-                Total Price
+                ${item.price}.00
               </CardItemHeaderContent>
             </CardItemHeader>
             <CardItemHeader>
@@ -265,7 +282,11 @@ const Cart = props => {
         <CartHeaderTitle>Your Orders</CartHeaderTitle>
         <CheckoutButton>
           Checkout
-      </CheckoutButton>
+
+        </CheckoutButton>
+        <TotalPrice>
+          Total Price: &nbsp;${totalPrice}.00
+        </TotalPrice>
       </CartHeader>
 
       {cartitems}

@@ -11,6 +11,7 @@ const NavBar = styled.div`
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    
 `;
 
 

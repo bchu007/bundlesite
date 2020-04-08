@@ -19,6 +19,7 @@ const MenuWrapper = styled.span`
     padding-right: 10px;
     width: 100vw;
     height: 60px;
+    z-index: 10;
 `
 // const MenuCondensedWrapper = styled.span`
 //     display: flex;
@@ -90,7 +91,7 @@ const FilterContainer = styled.div`
     width: 365px;
     box-sizing: border-box;
     height: calc(100% - 60px);
-
+    z-index: 20;
     -webkit-transition: 300ms ease-in-out;
     -moz-transition: 300ms ease-in-out;
     -o-transition: 300ms ease-in-out;

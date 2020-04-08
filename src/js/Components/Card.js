@@ -90,7 +90,7 @@ const PriceWrapper = styled.div`
     position: relative;
     bottom: 130px;
     display: flex;
-    color: #B12704;
+    color: white;
 `
 
 export default function Card(props) {

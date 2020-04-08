@@ -166,10 +166,12 @@ const TotalPrice = styled.span`
 `
 const Cart = props => {
   var date = new Date();
-
-  const [totalPrice, setTotalPrice] = useState(props.cart.map((item, index) => {
+  var sum = (numbers) => numbers.reduce(function (prev, curr) {
+    return curr + prev;
+  }, 0);
+  const [totalPrice, setTotalPrice] = useState(sum(props.cart.map((item, index) => {
     return (item.price * item.quantity)
-  }).reduce((a, b) => a + b));
+  })));
   console.log('cart props: ', props)
 
 
@@ -217,6 +219,9 @@ const Cart = props => {
           </Stocked>
           <QuantityWrapper>
             <QuantitySelector onClick={(event) => {
+              setTotalPrice(sum(props.cart.map((item, index) => {
+                return (item.price * item.quantity)
+              })));
               props.setPurchased();
               console.log(event.target.value);
               if (parseInt(event.target.value) === 0) {
@@ -245,6 +250,9 @@ const Cart = props => {
             &nbsp;
             <DeleteItemButton onClick={() => {
               props.removeCart(item.product_id);
+              setTotalPrice(sum(props.cart.map((item, index) => {
+                return (item.price * item.quantity)
+              })));
             }}>
               Delete
             </DeleteItemButton>

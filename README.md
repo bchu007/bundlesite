@@ -2,7 +2,7 @@
 
 A taiko equiptment store
 
-
+![](https://i.imgur.com/DdfszMB.png)
 ## To build the site
 
 for the repo into your own local computer
